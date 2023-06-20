@@ -1,6 +1,8 @@
 class ClientsController < ApplicationController
 
-
-private
+    def show
+        client = Client.find(params[:id])
+        render json: client
+    end
 
 end
